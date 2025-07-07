@@ -1,5 +1,7 @@
 import React from "react";
-import HeroSection from "./components/HeroSection";
+
+import HeroSection from "./Components/herosection";
+
 
 function App() {
   const fetchWeather = async (city) => {

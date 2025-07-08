@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./Components/HeroSection";
 
 
 // import "./App.css";
@@ -8,11 +8,7 @@ import HeroSection from "./components/HeroSection";
 function App() {
   const fetchWeather = async (city) => {
     try {
-    
-      await fetch(`http://localhost:5000/api/weather?city=${city}`);
-
-      
-
+      const res = await fetch(`http://localhost:5000/api/weather?city=${city}`);
       const data = await res.json();
       if (data.error) {
         alert("City not found");

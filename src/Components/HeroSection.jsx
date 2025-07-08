@@ -21,10 +21,12 @@ const iconMap = {
 };
 
 const fetchWeather = async (city) => {
-  const response = await axios.fetch(
+  const response = await axios.get(
     `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=0f7c6ef6c6607081001a77624225f5d7`
   );
-}
+  return response.data;
+};
+
 const HeroSection = ({ onSearch }) => {
 
 const{data:weather,isloading,iserror} = useQuery({
